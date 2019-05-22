@@ -1,0 +1,8 @@
+//sychronizedcheckin.ch
+//The robots both move at the same time, one moves straight and one curves and they arrive at the end at the same time.
+#include<linkbot.h>
+CLinkbotI Left,Right;
+Left.setSpeed(2.35,2);
+Left.driveDistanceNB(22,2);//go straight
+Right.setJointSpeeds(130,NaN,-90);//curve drive
+Right.moveTime(9.2);//curve drive
