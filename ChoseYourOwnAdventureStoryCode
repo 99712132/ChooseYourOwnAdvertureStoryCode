@@ -1,0 +1,392 @@
+//chooseYourOwnAdventureStorty.ch
+//declarations
+//declarations are used as variables,int=a number,double=a decimal,and string_t= a word
+#include <chplot.h>
+CPlot plot;
+plot.axisRange(PLOT_AXIS_X, -8,8);
+plot.axisRange(PLOT_AXIS_Y,-8,8);
+string_t name;
+string_t name2;
+int rngxD;
+rngxD=randint(2,5);
+//choice1 declarations
+int choice;
+int attackers;
+string_t char1;
+int attacker;
+    //choice1a declarations
+    int choice1a;
+    //choice1b declarations
+    int p;
+    int rng;
+    rng=randint(3,7);
+    int answer1b;
+//choice2 declarations
+    int choice2;
+    string_t char2;
+    int rng2;
+    string_t riddleAnswer;
+    string_t char3;
+//choice3 declarations
+int choice3;
+string_t ans;
+int height;
+//fuction for option 1
+void choiceOne(){
+//printf prints words on your screen
+printf("\n\n\n\n\n\n%s and %s have been walking for 2 hours now and decide to take a break.\n You take a swig of water and you hear a twig snap, what is it?\nWhat is it: ",name,name2);
+//scanf scans for a user imput and turns it into a string
+scanf("%s",&char1);
+attacker=randint(2,5);
+printf("\n\n\n\n\n%s comes out of nowhere and is now staring dead at you.\nYou see %d of then and they aren't making a move.\nWhat do you do? 1 Run away, 2 Stay and fight, or 3 give them the benefit of the doubt and see what they have to say.\n",char1,attacker);
+}
+//fuction for option 1A
+void choiceOneA(){
+    printf("\n\n\n\nBefore %s and %s could even think their legs acted and ran off together.\n",name,name2);
+    printf("What they didn't know was that all %d of the %ss were actually friendly and just wanted to chat with you guys.\n",attacker,char1);
+    printf("You guys are sprinting like there is no tomorrow, stumbling, and triping all over the place.\n");
+    printf("As they are running they see the edge of the jungle and hear loud whooshes and splashing.\n");
+    printf("After running for so long and being so scared %s and %s run right into a rapid and fall in getting sweped away.\n",name,name2);
+    printf("%s wake up to a rude awakending with their bed soaked and in %d hours, calls %s and the same thing happened to them.\n",name,rngxD,name2);
+    sleep(5);//sleep makes the code stop and it continues after the specified time
+    //plot allows you to plot graphs
+    plot.strokeColor("black");
+    plot.fillColor("green");
+    plot.rectanglexy(-8,-8,8,8);
+    plot.fillColor("yellow");
+    plot.circle(0,0,4);
+    plot.fillColor("black");
+    plot.circle(-2,4,0.5);
+    plot.fillColor("black");
+    plot.circle(2,4,0.5);
+    plot.line(-2,-2,2,-2);
+}
+//fuction for option 1B
+void choiceOneB(){
+    printf("\n\n\n\n%s and %s were so scared at the %s that they pulled out their knives and lunged at them.\nBefore they could even tell %s and %s that they didn't want to harm them, their instincts kicked in and with one touch your knife\ndisintegrated.\nNow after enraging them you see how you are no match for them.They finally speak,'You dare strike me!?\nI am the deity,and I was going to grant you guys each a wish for being able to see me, but now you will be punished! I will give you both a chance but\nyou have to get this question corret.'\n",name,name2,char1,name,name2);
+    int f(int rng){
+    return (rng*rng*rng);
+    }
+    printf("what is %d cubed?\n",rng);
+    scanf("%d",&answer1b);
+    if(answer1b==f(rng)){
+        printf("Congrats you were right so I'll let you live but your memory of me will be erased.\n");
+        printf("But before I erase your memeory I'll tell you that you have came back into the jungle and made the same mistake\n");
+        printf("%d now, don't come back next time!\n",rngxD);
+        sleep(5);
+        plot.strokeColor("black");
+        plot.fillColor("green");
+        plot.rectanglexy(-8,-8,8,8);
+        plot.fillColor("yellow");
+        plot.circle(0,0,4);
+        plot.fillColor("black");
+        plot.circle(-2,4,0.5);
+        plot.fillColor("black");
+        plot.circle(2,4,0.5);
+        plot.line(-2,-2,2,-2);
+    }else{
+        printf("You guys were wrong so now you will fall for %d million years!\n",rngxD);
+        sleep(10);
+        plot.strokeColor("black");
+        plot.fillColor("green");
+        plot.rectanglexy(-8,-8,8,8);
+        plot.fillColor("yellow");
+        plot.circle(0,0,4);
+        plot.fillColor("black");
+        plot.circle(-2,4,0.5);
+        plot.fillColor("black");
+        plot.circle(2,4,0.5);
+        plot.arc(0,-4,2.5,0,180);
+    } 
+}
+//fuction for option 1C
+void choiceOneC(){
+    printf("\nInstinctively %s grabbed their knife, but %s told them to put it down.\nThe %s looked more calm now and slowly moved towards you guys.\nThey said 'Thank you for not attacking, I only wished to talk to you two.'\nNow after talking to them you realize how nice they are and also how powerful they are and that it was a good thing that %s did't attack.\nFor being so kind to them they granted them %d wishes.\n",name,name2,char1,name,rngxD);
+    printf("%d years later %s and %s used all their wishes and got super rich.\n",rng,name,name2);
+    printf("Both of them lived long happy lives.\n");
+    sleep(5);
+    plot.strokeColor("black");
+    plot.fillColor("green");
+    plot.rectanglexy(-8,-8,8,8);
+    plot.fillColor("yellow");
+    plot.circle(0,0,4);
+    plot.fillColor("black");
+    plot.circle(-2,4,0.5);
+    plot.fillColor("black");
+    plot.circle(2,4,0.5);
+    plot.arc(0,-2,2.5,-180,0);
+}
+
+//fuction for option 2
+void choiceTwo(){
+    printf("\n\nSo, now %s and %s start off driving in their car.\n",name,name2);
+    printf("They'be been driving for 3 hours now and %s starts hearing sounds from the engine.\n",name);
+    printf("%s goes outside to try to fix it and %s figure outs the problem.\n",name2,name2);
+    printf("While out there %s starts hearing strage sounds.\n",name2);
+    printf("Both of them start to look around and you guys can see how the bushes and trees are moving, they're not alone.");
+    printf("The air gets tense and they feel as something terible is going to happen.\n");
+    printf("What do you guys do?\n");
+    printf("Type 1 to start running, 2 to get in the car, or 3 for LOLXD.\n");
+}
+//fuction for option 2A
+void choiceTwoA(){
+    printf("\n\n%s and %s knew that this would be a life or death situation so they took off running, and ran for %d hours.\n",name,name2,rng);    
+    printf("%s turn around for one second, thinking that you guys are safe.\n",name);
+    printf("He turns back around and doesn't see %s.\n",name2);
+    printf("As %s is running he runs into the air, the monster was invisible and shows itself to %s.\n",name,name);
+    printf("You can recognize how strong it is and now it's the end of the line for you.\n");
+    printf("The monster ends it quickly and within %d seconds, it's all over.\n",rngxD);
+    sleep(7);
+    plot.strokeColor("black");
+    plot.fillColor("green");
+    plot.rectanglexy(-8,-8,8,8);
+    plot.fillColor("yellow");
+    plot.circle(0,0,4);
+    plot.fillColor("black");
+    plot.circle(-2,4,0.5);
+    plot.fillColor("black");
+    plot.circle(2,4,0.5);
+    plot.arc(0,-4,2.5,0,180);
+}
+//fuction for option 2B
+void choiceTwoB(){
+    printf("\n\n\n%s get into the car right away becasue he got scared, and instantly start driving.\n",name);
+    rng2=randint(3,7);
+    printf("%s turns their head around and sees %d monkey looking things chasing them.\n",name2,rng2);
+    printf("While in the car %s hears some banging in the backseat, when %s turns around they see a girl in the back.\n",name2,name2);
+    printf("She looked like she was just waking up from a nap\n");
+    printf("What is her name?\n");
+    scanf("%s",&char2);
+    printf("\n\n\n\n\nShe finally introduces herself as %s, and finally gets up and sits straight up.\n",char2);
+    printf("%s asks her who she is and how she got there and she explains that the things chasing them are actually chasing her becasue\nshe accidentally woke them up while lost in the jungle.\n",name2);
+    printf("She tells them that the only way to get out alive is to answer their riddle, so %s stop the car and turn around and the creatures stop\nand gives them their riddle.\n",name);
+    sleep(10);
+    printf("The riddle is:\n");
+    printf("what is yellow and furry\n"); 
+    printf("but not cuddly\n"); 
+    printf("you cant hold it and snuggle\n");
+    printf("but it is still a feline\n");
+    printf("What is the answer.\n");
+    scanf("%s",&riddleAnswer);
+    if(riddleAnswer=="lion"||riddleAnswer=="Lion"||riddleAnswer=="A Lion"||riddleAnswer=="a lion"){
+        printf("congrats you win, so we'll forgive all of you.\nYou guys can leave now, and we'll give you %d pounds of gold.\n",rngxD);
+        sleep(2);
+        plot.strokeColor("black");
+        plot.fillColor("green");
+        plot.rectanglexy(-8,-8,8,8);
+        plot.fillColor("yellow");
+        plot.circle(0,0,4);
+        plot.fillColor("black");
+        plot.circle(-2,4,0.5);
+        plot.fillColor("black");
+        plot.circle(2,4,0.5);
+        plot.arc(0,-2,2.5,-180,0);
+    }else{
+        printf("The answer was lion, but you guys got it incorret so now you'll all fall for %d years.\n",rng);
+        plot.strokeColor("black");
+        plot.fillColor("green");
+        plot.rectanglexy(-8,-8,8,8);
+        plot.fillColor("yellow");
+        plot.circle(0,0,4);
+        plot.fillColor("black");
+        plot.circle(-2,4,0.5);
+        plot.fillColor("black");
+        plot.circle(2,4,0.5);
+        plot.arc(0,-4,2.5,0,180);
+    }
+}
+//fuction for option 2C
+void choiceTwoC(){
+    printf("\n\n\n\n\n\nBy selecting LOLXD %s and %s have broken the 4th barrier and now their past life will guide them.\n",name,name2);
+    printf("After %d seconds the centaur GayBriel jumps through and slays the monster chasing you.\n",rng);
+    printf("I'm GAY");
+    sleep(3);
+    printf("Briel");
+    sleep(3);
+    printf(" but you can call me whaterver you want.""\nWhat do they call him?\n");
+    scanf("%s",&char3);
+    printf("%s will now guide them and help %s and %s find the treasure.\n",char3,name,name2);
+    printf("He brings them %d miles into the jungle and shows them his quote unquote treasure.\n",rngxD);
+    printf("After being enlightened he sends them home with riches and a tale to tell for generations and generations.\n");
+    sleep(7);
+    plot.strokeColor("black");
+    plot.fillColor("green");
+    plot.rectanglexy(-8,-8,8,8);
+    plot.fillColor("yellow");
+    plot.circle(0,0,4);
+    plot.fillColor("black");
+    plot.circle(-2,4,0.5);
+    plot.fillColor("black");
+    plot.circle(2,4,0.5);
+    plot.arc(0,-2,2.5,-180,0);
+}
+//fuction for option 3
+void choiceThree(){
+    printf("\n\n\n%s and %s go out boating to try to explore some underwater caves.\n",name,name2);
+    printf("After boating for several hours %s spot a promising cavarn to explore\n",name);
+    printf("So, they cautiously go towards it, and as they get closer you see an eerie green glow.\n");
+    printf("%s and %s also hear some ominous moans and groans that sends chills down their backs.\n",name,name2);
+    printf("%s begin to think to himself and ask %s if this was even a good idea, but it's too late now so they have to continue.\n",name,name2);
+    printf("As they turn the corner what do they do, 1 continue onwards, 2 try to pull over to the dry part of the cavarn, or 3 run into\nthe ship wrechage.\n");
+}
+//fuction for option 3A
+void choiceThreeA(){
+    printf("As %s and %s move onwards the wails get lounder and louder.\n",name,name2);
+    printf("They get so loud that it shatters the boat.\n");
+    printf("Wile falling into the water %s loses sight of %s and thinks to himself on how similar the yells sound to his sister's yells,\nalso that he doesn't know how to swim, and that he's probably dead.\n",name,name2);
+    sleep(7);
+    printf("\nUnderwater, while his vision fails him, %s see something swimming up to him.\n",name);
+    printf("Right as he is about to faint he see a glimps of a majestic tail and feel it embrace his face.\n");
+    sleep(4);
+    printf("\nAfter waking from his blackout he see a beatiful woman on the shore looking at the water.\n");
+    printf("%s walk up to her and right before he ask her name she slaps him %d times right across the cheak.\n",name,rngxD);
+    printf("She yells, ''That's what you get for barging in her while I was bathing!''\n");
+    printf("With a confused look %s realize that she was the sound that he heard and that she saved him.\n",name);
+    printf("%s thanks her and she shows him her village and becasue he was so captivated by her beauty, %s stayed there,\nleaving his old life and friends behind.\n",name,name);
+    printf("*cough* *cough* %s died.\n",name2);
+    printf("3 years later he has %d kids with her.\n",rng);
+    sleep(10);
+    plot.strokeColor("black");
+    plot.fillColor("green");
+    plot.rectanglexy(-8,-8,8,8);
+    plot.fillColor("yellow");
+    plot.circle(0,0,4);
+    plot.fillColor("black");
+    plot.circle(-2,4,0.5);
+    plot.fillColor("black");
+    plot.circle(2,4,0.5);
+    plot.arc(0,-2,2.5,-180,0);
+}
+//fuction for option 3B
+void choiceThreeB(){
+    height=randint(7,9);
+    printf("%s and %s trys to pull over to the dry land, fighting the current.\n",name,name2);
+    printf("They see the green glow on land grow brighter.\n");
+    printf("As they get closer they begin to regret their choices, as they get closer they see a tall figure on land.\n");
+    printf("As they get closer the tall figure comes into view and turns out to be just a regular man who is %d feet tall.\n",height);
+    printf("He tells %s and %s that he has a lot of treasure and if you can answer his riddle you can take the riches and leave,\n",name,name2);
+    printf("but if they get it wrong they'll have to stay there with him for all of eternity.\n");
+    sleep(10);
+    printf("The riddle is:\n");
+    printf("I am something which cannot be seen\n");
+    printf("Im measured on the Beaufort scale\n");
+    printf("I help to keep a kite in the air\n");
+    printf("And I am what helps ships to sail\n");
+    printf("What am I?\n");
+    scanf("%s",&ans);
+    if(ans=="wind"||ans=="Wind"){
+        printf("You guys got it right, so I'll hold up my end of the deal.\n");
+        printf("I have %d tons of treasue, and you guys can have all of it.\n",rngxD);
+        sleep(3);
+        plot.strokeColor("black");
+        plot.fillColor("green");
+        plot.rectanglexy(-8,-8,8,8);
+        plot.fillColor("yellow");
+        plot.circle(0,0,4);
+        plot.fillColor("black");
+        plot.circle(-2,4,0.5);
+        plot.fillColor("black");
+        plot.circle(2,4,0.5);
+        plot.arc(0,-2,2.5,-180,0);
+    }else{
+        printf("Welp, you guys got it wrong, so you'll have to stay here now for %d billion years.\n",rng);
+        plot.strokeColor("black");
+plot.fillColor("green");
+plot.rectanglexy(-8,-8,8,8);
+plot.fillColor("yellow");
+plot.circle(0,0,4);
+plot.fillColor("black");
+plot.circle(-2,4,0.5);
+plot.fillColor("black");
+plot.circle(2,4,0.5);
+plot.arc(0,-4,2.5,0,180);
+    }
+}
+//fuction for option 3C
+void choiceThreeC(){
+    printf("\n\n\n\n\nThe rapids start to pickup so now %s and %s are looking for any kind of way to stop.\n",name,name2);
+    printf("Out of the corner of %s's eye he sees a ship wreck, %s get a weird feeling but he tells %s that it's the only way.\n",name,name2,name);
+    printf("%d seconds later,\nBOOM! CRASH!\nYou run into the wreckage and you get knocked down and blackout",rng);
+    sleep(10);
+    printf(".");
+    sleep(1);
+    printf(".");
+    sleep(1);
+    printf(".\n");
+    sleep(1);
+    printf("They start to regain consciousness, as they regain their vision they start to feel cold.\n");
+    printf("They look down and they see water, thats when %s realize that they're in the jail cell of one of the broken ships.\n",name2);
+    printf("After awhile they see a ghost run by and stare at them.");
+    printf("In an instant everything goes white and you see the light.\n");
+    printf("%d seconds later they can see again and they look down, but they can't see their bodies.\n",rngxD);
+    printf("%s and %s have now become ghosts.\nThe END\n",name,name2);
+    sleep(5);
+    plot.strokeColor("black");
+    plot.fillColor("green");
+    plot.rectanglexy(-8,-8,8,8);
+    plot.fillColor("yellow");   
+    plot.circle(0,0,4);
+    plot.fillColor("black");
+    plot.circle(-2,4,0.5);
+    plot.fillColor("black");
+    plot.circle(2,4,0.5);
+    plot.arc(0,-4,2.5,0,180);
+}
+//main code that uses all the functions and where you pu the functions into
+int main(){
+    printf("Welcome to your jungle adventure!\nYou will be able to control and change your story based on the option you choose.\nA number will be assigned to an option and the story will change according to the chocie you chose.\nYou will be able to choose a number associated to a choice that will determine how your story changes.\n");
+    printf("What is your name?\n");
+    scanf("%s",&name);
+    printf("You get to bring a friend what is their name.\n");
+    scanf("%s",&name2);
+    printf("How do you start your adventure, do you 1, walk, 2 drive, 3, boat?\n");
+    do{
+        scanf("%d",&choice);
+        }while(choice>=4);
+    if(choice==1){
+        choiceOne();
+        do{
+            scanf("%d",&choice1a);
+            }while(choice1a>=4);
+            if(choice1a==1){
+                choiceOneA();
+            }
+            else if(choice1a==2){
+                choiceOneB();
+            }
+            else if(choice1a==3){
+                choiceOneC();
+            }
+    }
+    else if(choice==2){
+        choiceTwo();
+        do{
+            scanf("%d",&choice2);
+            if(choice2==1){
+                choiceTwoA();
+            }
+            else if(choice2==2){
+                choiceTwoB();
+            }
+            else if(choice2==3){
+                choiceTwoC();
+            }
+        }while(choice2>=4);
+        }
+    else if(choice==3){
+        choiceThree();
+        do{
+            scanf("%d",&choice3);
+            if(choice3==1){
+                choiceThreeA();
+            }
+            else if(choice3==2){
+                choiceThreeB();
+            }
+            else if(choice3==3){
+                choiceThreeC();
+            }
+        }while(choice3>=4);
+    }
+plot.plotting();
+}
