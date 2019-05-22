@@ -1,4 +1,5 @@
 //chooseYourOwnAdventureStorty.ch
+//The code is used a game story where the user makes their own selections to change the events in the story, with multiple outcomes.
 //declarations
 //declarations are used as variables,int=a number,double=a decimal,and string_t= a word
 #include <chplot.h>
